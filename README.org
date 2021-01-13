@@ -1,0 +1,10 @@
+#+TITLE: Advent of Code 2020
+
+I should have done earlier(´・ω・`)
+
+* What to do
+Solve problems of ``Advent of Code 2020'' with 25 programming languages.
+
+* Clarification
+- [[./clars/day1.org][day1]]
+- [[file:clars/day1.org][file:~/repo/github.com/diohabara/aoc2020/clars/day1.org]]
