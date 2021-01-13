@@ -1,11 +1,19 @@
 * day1
 
-** Problem
+** Part One
+*** Problem
 This problem asks me to find two numbers in ~input~ that sum up to 2020.
-** Solution
+*** Solution
 It is easy to solve this problem naively. Just iterate through the sequence of numbers twice. This solution, however, has \(O(N^2)\). In order to make it more efficient I can use hashmap.
+
 First, I store ~2020 - number~ as key and the index of the number as value by iterating through the sequence. Second, check if a number in the sequence is in the key and the index of the number and the value-index is not the same. This operations is seeing if the two numbers are different and sum up to 2020.
+
 Each of these operations takes \(O(N)\), so the total time is \(O(N)\).
-** Code
+*** Code
 This is my [[../codes/day1/src/main.rs][original code]].
+
 You'll get the answer, ~1007331~.
+** Part Two
+*** Problem
+*** Solution
+*** Code
