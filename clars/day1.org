@@ -7,47 +7,5 @@ It is easy to solve this problem naively. Just iterate through the sequence of n
 First, I store ~2020 - number~ as key and the index of the number as value by iterating through the sequence. Second, check if a number in the sequence is in the key and the index of the number and the value-index is not the same. This operations is seeing if the two numbers are different and sum up to 2020.
 Each of these operations takes \(O(N)\), so the total time is \(O(N)\).
 ** Code
-#+begin_src rust :dir ./
-use std::collections::HashMap;
-use std::io::BufRead;
-use std::path::Path;
-use std::{fs::File, io::BufReader};
-
-fn main() {
-    let mut index_of_comp = HashMap::new();
-    const TARGET: i32 = 2020;
-
-    let filename = "/Users/jio/repo/github.com/diohabara/aoc2020/clars/day1/input";
-    let file_path = Path::new(filename);
-    let reader = get_file_reader(&file_path);
-
-    for (index, num) in reader.lines().enumerate() {
-        if let Ok(num) = num {
-            index_of_comp.insert(TARGET - num.parse::<i32>().unwrap(), index);
-        }
-    }
-
-    let reader = get_file_reader(&file_path);
-    for (index, num) in reader.lines().enumerate() {
-        if let Ok(num) = num {
-            let num = num.parse::<i32>().unwrap();
-            if index_of_comp.contains_key(&num) && index_of_comp[&num] != index {
-                println!(
-                    "I get {} when I multiply them together.",
-                    (TARGET - num) * num
-                );
-                return;
-            }
-        }
-    }
-}
-
-fn get_file_reader(path: &Path) -> impl BufRead {
-    BufReader::new(File::open(path).unwrap())
-}
-#+end_src
-
-#+RESULTS:
-: I get 1007331 when I multiply them together.
-
-[[../codes/day1/src/main.rs][original code]]
+This is my [[../codes/day1/src/main.rs][original code]].
+You'll get the answer, ~1007331~.
