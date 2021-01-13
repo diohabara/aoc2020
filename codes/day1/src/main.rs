@@ -1,15 +1,3 @@
-#+STARTUP: latexpreview
-
-* day1
-
-** Problem
-This problem asks me to find two numbers in ~input~ that sum up to 2020.
-** Solution
-It is easy to solve this problem naively. Just iterate through the sequence of numbers twice. This solution, however, has $O(N^2)$. In order to make it more efficient I can use hashmap.
-First, I store ~2020 - number~ as key and the index of the number as value by iterating through the sequence. Second, check if a number in the sequence is in the key and the index of the number and the value-index is not the same. This operations is seeing if the two numbers are different and sum up to 2020.
-Each of these operations takes \(O(N)\), so the total time is \(O(N)\).
-** Code
-#+begin_src rust :dir ./
 use std::collections::HashMap;
 use std::io::BufRead;
 use std::path::Path;
@@ -19,7 +7,7 @@ fn main() {
     let mut index_of_comp = HashMap::new();
     const TARGET: i32 = 2020;
 
-    let filename = "/Users/jio/repo/github.com/diohabara/aoc2020/clars/day1/input";
+    let filename = "./data/input";
     let file_path = Path::new(filename);
     let reader = get_file_reader(&file_path);
 
@@ -47,9 +35,3 @@ fn main() {
 fn get_file_reader(path: &Path) -> impl BufRead {
     BufReader::new(File::open(path).unwrap())
 }
-#+end_src
-
-#+RESULTS:
-: I get 1007331 when I multiply them together.
-
-[[../codes/day1/src/main.rs][original code]]
