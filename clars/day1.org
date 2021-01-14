@@ -1,6 +1,7 @@
 * day1
-This is my [[../codes/day1/src/main.rs][Rust code]].
-** Part One
+- My [[../codes/day1/src/main.rs][Rust code]]
+- [[https://adventofcode.com/2020/day/1][Link to the problem]]
+** Par One
 *** Problem
 This problem asks me to find two numbers in ~input~ that sum up to 2020.
 *** Solution
