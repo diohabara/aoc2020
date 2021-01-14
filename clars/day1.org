@@ -1,5 +1,5 @@
 * day1
-- My [[../codes/day1/src/main.rs][Rust code]]
+- [[../codes/day1/src/main.rs][Rust code]]
 - [[https://adventofcode.com/2020/day/1][Link to the problem]]
 ** Par One
 *** Problem
