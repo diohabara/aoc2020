@@ -11,6 +11,9 @@ First, I store ~2020 - number~ as key and the index of the number as value by it
 
 Each of these operations takes \(O(N)\), so the total time is \(O(N)\).
 *** Answer
+#+begin_src shell
+cargo run
+#+end_src
 I've got the answer, ~1007331~.
 ** Part Two
 *** Problem
@@ -24,4 +27,7 @@ In the second step, I iterate through the sequence twice, and the compare thorse
 
 The order of this solution is \(O(N^2)\). The first step is \(O(N)\) and the second step is \(O(N^2)\), so in total \(O(N^2)\).
 *** Answer
+#+begin_src shell
+cargo run
+#+end_src
 I've got the answer, ~48914340~.
