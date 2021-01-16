@@ -6,7 +6,7 @@
 *** Problem
 This problem asks me to count a character in a string.
 *** Solution
-If a password has specified number of the character, then it's valid ; otherwise invalid.
+If a password has specified number of the character, then it's valid; otherwise invalid.
 
 Repeat this procedure until the end of the file and count how many of those strings are valid.
 *** Answer
@@ -17,5 +17,13 @@ I’ve got the answer, ~393~.
 
 ** Part Two
 *** Problem
+This problem is also asking me to count a character in a string, but this time, it's just two positions.
 *** Solution
+If a password has an exactly one character in two positions in the string, then it's valid; otherwise invalid.
+
+This is like an XOR operation. Check the string has the character at ~A~ position XOR ~B~ position.
 *** Answer
+#+begin_src shell
+bazel run //main:solve
+#+end_src
+I've got the answer, ~690~.
