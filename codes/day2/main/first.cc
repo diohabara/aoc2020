@@ -1,26 +1,24 @@
 #include "main/first.h"
 
-#include <fstream>
-#include <iostream>
-#include <iterator>
-#include <sstream>
 #include <string>
 #include <vector>
 
+#include "main/common.h"
+
 namespace first {
 int count_valid_passwords(const std::string filename) {
-  auto lines = read_line_by_line(filename);
+  auto lines = common::read_line_by_line(filename);
   int cnt = 0;
   for (auto line : lines) {
     int lower, upper;
     std::string str_line = line.c_str();
     char count_char;
     std::string password;
-    auto vec_line = split(str_line, ' ');
+    auto vec_line = common::split(str_line, ' ');
     // separate lines
     for (auto i = 0; i < vec_line.size(); ++i) {
       if (i == 0) {
-        auto bounds = split(vec_line[i], '-');
+        auto bounds = common::split(vec_line[i], '-');
         lower = stoi(bounds[0]);
         upper = stoi(bounds[1]);
       }
@@ -36,35 +34,6 @@ int count_valid_passwords(const std::string filename) {
     }
   }
   return cnt;
-}
-
-std::vector<std::string> read_line_by_line(const std::string filename) {
-  std::ifstream file(filename);
-  std::vector<std::string> ret{};
-
-  if (file.is_open()) {
-    std::string line;
-    while (std::getline(file, line)) {
-      ret.push_back(line);
-    }
-    file.close();
-  }
-  return ret;
-}
-
-template <typename Out>
-void split(const std::string &s, char delim, Out result) {
-  std::istringstream iss(s);
-  std::string item;
-  while (std::getline(iss, item, delim)) {
-    *result++ = item;
-  }
-}
-
-std::vector<std::string> split(const std::string &s, char delim) {
-  std::vector<std::string> elems;
-  split(s, delim, std::back_inserter(elems));
-  return elems;
 }
 
 bool is_valid(const std::string &counted_str, char count_char, int lower,
