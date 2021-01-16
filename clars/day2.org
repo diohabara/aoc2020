@@ -1,5 +1,5 @@
 * day2
-- [[../codes/day2][Python Code]]
+- [[../codes/day2][C++ Code]]
 - [[https://adventofcode.com/2020/day/2][Link to the problem]]
 
 ** Part One
