@@ -7,3 +7,4 @@ Solve problems of ``Advent of Code 2020'' with 25 programming languages.
 
 * Clarification
 - [[./clars/day1.org][day1]]
+- [[./clars/day2.org][day2]]

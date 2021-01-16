@@ -1,0 +1,21 @@
+* day2
+- [[../codes/day2][Python Code]]
+- [[https://adventofcode.com/2020/day/2][Link to the problem]]
+
+** Part One
+*** Problem
+This problem asks me to count a character in a string.
+*** Solution
+If a password has specified number of the character, then it's valid ; otherwise invalid.
+
+Repeat this procedure until the end of the file and count how many of those strings are valid.
+*** Answer
+#+begin_src shell
+bazel run //main:solve
+#+end_src
+I’ve got the answer, ~393~.
+
+** Part Two
+*** Problem
+*** Solution
+*** Answer
